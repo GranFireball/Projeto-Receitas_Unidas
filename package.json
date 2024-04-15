@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@mantine/hooks": "^7.7.1",
+    "@prisma/client": "^5.12.1",
     "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tanstack/react-query": "^5.28.14",
     "@types/node": "20.5.7",
     "@vercel/postgres": "^0.5.0",
     "autoprefixer": "10.4.15",
@@ -19,6 +23,9 @@
     "postcss": "8.4.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.51.2",
+    "react-icons": "^5.0.1",
+    "react-window": "^1.8.10",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
     "zod": "^3.22.2"
@@ -27,13 +34,15 @@
     "@types/bcrypt": "^5.0.1",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.14",
+    "@types/react-window": "^1.8.8",
     "@vercel/style-guide": "^5.0.1",
     "dotenv": "^16.3.1",
     "eslint": "^8.52.0",
     "eslint-config-next": "^14.0.0",
     "eslint-config-prettier": "9.0.0",
     "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "0.5.4"
+    "prettier-plugin-tailwindcss": "0.5.4",
+    "prisma": "^5.12.1"
   },
   "engines": {
     "node": ">=18.17.0"

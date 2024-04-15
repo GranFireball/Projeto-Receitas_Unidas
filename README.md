@@ -1,5 +1,12 @@
-## Next.js App Router Course - Starter
+#Receitas Unidas
 
-This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
+Este projeto foi criado com o objetivo de agrupar diversas receitas.
 
-For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
+
+- SEM uma conta de usuário conectada, é possível visualizar todas as receitas compartilhadas no site.
+
+- COM uma conta de usuário conectada, além de poder visualizar todas as receitas, é possível criar uma receita, editá-la e deletá-la.
+
+
+
+Ferramentas e técnicas utilizadas: HTML, Tailwind CSS, Javascript, Typescript, React, NextJS, Prisma, PostgreSQL, react-query, react-icons, useForm, usePagination, componentização, design responsivo.
