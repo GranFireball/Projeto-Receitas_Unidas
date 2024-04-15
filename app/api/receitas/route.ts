@@ -7,6 +7,6 @@ export async function GET(){
     return NextResponse.json(receitas, {status: 200})
   }
   catch(error){
-    return NextResponse.json({message: "Erro ao carregar receitas"}, {status: 500})
+    return NextResponse.json({message: error}, {status: 500})
   }
 }

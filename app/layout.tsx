@@ -1,7 +1,6 @@
 import Header from "@/src/components/Header";
 import Providers from "@/src/components/Providers";
 import { ProvidersContext } from "@/src/context/ProvidersContext";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import 'tailwindcss/tailwind.css';
 
 export default function RootLayout({
