@@ -36,7 +36,7 @@ export default function Page() {
   function receitasPagina(pagina: number) {
     const primeiroItem = (pagina - 1) * qtdReceitasPorPagina;
     const ultimoItem = primeiroItem + qtdReceitasPorPagina;
-    setReceitasFiltradas(sistemaReceitas?.receitas.slice(primeiroItem, ultimoItem));
+    setReceitasFiltradas(() => sistemaReceitas?.receitas.slice(primeiroItem, ultimoItem));
     return sistemaReceitas?.receitas.slice(primeiroItem, ultimoItem);
   }
 
