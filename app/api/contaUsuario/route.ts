@@ -1,10 +1,10 @@
-import db from "@/src/lib/db";
+import prisma from "@/src/lib/db";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request){
   try{
     const body = await req.json();
-    const contaUsuario = await db.contaUsuario.findFirst({
+    const contaUsuario = await prisma.contaUsuario.findFirst({
       where: {
         usuario: body.usuario,
         senha: body.senha

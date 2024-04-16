@@ -1,10 +1,11 @@
+import prisma from "@/src/lib/db";
 import db from "@/src/lib/db";
 import { NextResponse } from "next/server";
 
 export async function PUT(req: Request){
   try{
     const body = await req.json();
-    const receitaJaExiste = await db.receita.findFirst({
+    const receitaJaExiste = await prisma.receita.findFirst({
       where: {
         nome: body.nome,
         ingredientes: body.ingredientes,
@@ -16,7 +17,7 @@ export async function PUT(req: Request){
       return NextResponse.json({message: "Receita já existe"}, {status: 400});
     }
     else{
-      const receita = await db.receita.update({
+      const receita = await prisma.receita.update({
         where: {
           id: body.id
         },

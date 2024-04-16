@@ -1,15 +1,16 @@
+import prisma from "@/src/lib/db";
 import db from "@/src/lib/db";
 import { NextResponse } from "next/server";
 
 export async function DELETE(req: Request) {
   try {
     const body = await req.json();
-    await db.receita.findFirstOrThrow({
+    await prisma.receita.findFirstOrThrow({
       where: {
         id: body.id
       }
     })
-    await db.receita.delete({
+    await prisma.receita.delete({
       where: {
         id: body.id
       }

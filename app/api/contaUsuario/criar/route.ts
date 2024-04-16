@@ -1,16 +1,17 @@
+import prisma from "@/src/lib/db";
 import db from "@/src/lib/db";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request){
   try{
     const body = await req.json();
-    const contaJaExistente = await db.contaUsuario.findFirst({
+    const contaJaExistente = await prisma.contaUsuario.findFirst({
       where: {
         usuario: body.usuario,
       }
     })
     if(contaJaExistente === null || contaJaExistente === undefined){
-      const contaUsuario = await db.contaUsuario.create({
+      const contaUsuario = await prisma.contaUsuario.create({
         data: {
           usuario: body.usuario,
           senha: body.senha

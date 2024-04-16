@@ -1,10 +1,11 @@
+import prisma from "@/src/lib/db";
 import db from "@/src/lib/db";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request){
   try{
     const body = await req.json();
-    const receita = await db.receita.findFirst({
+    const receita = await prisma.receita.findFirst({
       where: {
         id: body.id
       },
