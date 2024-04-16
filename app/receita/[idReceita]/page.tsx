@@ -10,7 +10,7 @@ import { TFormReceita } from '@/src/types/types';
 import ButtonVoltar from '@/src/components/ButtonVoltar';
 import ButtonEditReceita from '@/src/components/ButtonEditReceita';
 import ButtonDeleteReceita from '@/src/components/ButtonDeleteReceita';
-import Notificacao from '@/src/components/Notificacao';
+import NotificacaoVermelha from '@/src/components/NotificacaoVermelha';
 
 export default function ReceitaPage() {
   const sistemaSnackbar = useContext(SnackbarContext);
@@ -71,7 +71,7 @@ export default function ReceitaPage() {
       <ButtonVoltar />
       {
         receitaDeletada === true ?
-          <Notificacao color="red" msgPrincipal="Receita deletada com sucesso" msgRedirect="Redirecionando para Página Inicial" />
+          <NotificacaoVermelha msgPrincipal="Receita deletada com sucesso" msgRedirect="Redirecionando para Página Inicial" />
           :
           receita ?
             <div className='w-[80%] p-4 border-2 border-black rounded-md'>

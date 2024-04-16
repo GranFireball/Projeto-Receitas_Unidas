@@ -9,7 +9,7 @@ import SnackbarContext from "@/src/context/snackbar/SnackbarContext";
 import { TFormReceita } from '@/src/types/types';
 import ButtonVoltar from '@/src/components/ButtonVoltar';
 import FormReceita from '@/src/components/FormReceita';
-import Notificacao from '@/src/components/Notificacao';
+import NotificacaoVerde from '@/src/components/NotificacaoVerde';
 
 export default function CriarReceitaPage() {
   const sistemaSnackbar = useContext(SnackbarContext);
@@ -62,7 +62,7 @@ export default function CriarReceitaPage() {
       <ButtonVoltar />
       {
         receitaCriada === true ?
-          <Notificacao color="green" msgPrincipal="Receita criada com sucesso" msgRedirect="Redirecionando para Página Inicial" />
+          <NotificacaoVerde msgPrincipal="Receita criada com sucesso" msgRedirect="Redirecionando para Página Inicial" />
           :
           sistemaLogin?.estado === "Logado" ?
             <div className='w-[80%] sm:w-fit p-4 border-2 border-black rounded-md overflow-hidden'>

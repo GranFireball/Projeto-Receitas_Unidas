@@ -9,7 +9,7 @@ import SnackbarContext from "@/src/context/snackbar/SnackbarContext";
 import { TFormReceita } from '@/src/types/types';
 import ButtonVoltar from '@/src/components/ButtonVoltar';
 import FormReceita from '@/src/components/FormReceita';
-import Notificacao from '@/src/components/Notificacao';
+import NotificacaoVerde from '@/src/components/NotificacaoVerde';
 
 export default function EditarReceitaPage() {
   const sistemaSnackbar = useContext(SnackbarContext);
@@ -117,7 +117,7 @@ export default function EditarReceitaPage() {
       <ButtonVoltar url={`/receita/${idReceita}`} />
       {
         receitaEditada === true ?
-          <Notificacao color="green" msgPrincipal="Receita editada com sucesso" msgRedirect="Redirecionando para Página da Receita" />
+          <NotificacaoVerde msgPrincipal="Receita editada com sucesso" msgRedirect="Redirecionando para Página da Receita" />
           :
           receita ?
             suaReceita === true ?
