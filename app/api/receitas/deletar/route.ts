@@ -5,12 +5,12 @@ import { NextResponse } from "next/server";
 export async function DELETE(req: Request) {
   try {
     const body = await req.json();
-    await prisma.receita.findFirstOrThrow({
+    await db.receita.findFirstOrThrow({
       where: {
         id: body.id
       }
     })
-    await prisma.receita.delete({
+    await db.receita.delete({
       where: {
         id: body.id
       }

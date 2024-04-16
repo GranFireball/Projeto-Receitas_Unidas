@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request){
   try{
     const body = await req.json();
-    const receita = await prisma.receita.findFirst({
+    const receita = await db.receita.findFirst({
       where: {
         id: body.id
       },

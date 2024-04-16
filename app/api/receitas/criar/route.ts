@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request){
   try{
     const body = await req.json();
-    const receitaJaExistente = await prisma.receita.findFirst({
+    const receitaJaExistente = await db.receita.findFirst({
       where: {
         nome: body.nome,
         ingredientes: body.ingredientes,
@@ -16,7 +16,7 @@ export async function POST(req: Request){
       return NextResponse.json({message: "Receita já existe"}, {status: 400});
     }
     else{
-      const receita = await prisma.receita.create({
+      const receita = await db.receita.create({
         data: {
           nome: body.nome,
           imagem: body.imagem,
