@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "postinstall": "npx prisma generate",
+    "postinstall": "prisma generate",
     "build": "npx prisma generate && next build",
     "dev": "next dev",
     "prettier": "prettier --write --ignore-unknown .",
