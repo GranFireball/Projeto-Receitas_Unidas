@@ -1,13 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "postinstall": "prisma generate",
-    "build": "prisma generate && next build",
+    "postinstall": "npx prisma generate",
+    "build": "npx prisma generate && next build",
     "dev": "next dev",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "start": "next start",
-    "vercel-build": "prisma generate && next build"
+    "vercel-build": "npx prisma generate && next build"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
